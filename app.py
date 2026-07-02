@@ -40,7 +40,7 @@ if st.button("Run Tests with Newman", type="primary"):
 
                 # Execute
                 try:
-                    process = subprocess.run(cmd, capture_output=True, text=True)
+                    process = subprocess.run(cmd, capture_output=True, text=True, shell=True)
                     stdout = process.stdout
                     stderr = process.stderr
                     
