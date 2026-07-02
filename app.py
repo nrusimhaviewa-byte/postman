@@ -29,7 +29,7 @@ if st.button("Run Tests with Newman", type="primary"):
                 
                 # Build command
                 report_path = os.path.join(tmpdir, "report.json")
-                cmd = ["npx", "newman", "run", coll_path, "--reporters", "cli,json", "--reporter-json-export", report_path]
+                cmd = ["npx", "--yes", "newman", "run", coll_path, "--reporters", "cli,json", "--reporter-json-export", report_path]
                 
                 # Save env if provided
                 if env_file:
